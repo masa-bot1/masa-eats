@@ -35,5 +35,10 @@ module App
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    # セッションミドルウェアを有効化
+    config.middleware.use ActionDispatch::Session::CookieStore
+
+    # セッションストアの設定
+    config.session_store :cookie_store, key: '_my_app_session'
   end
 end
