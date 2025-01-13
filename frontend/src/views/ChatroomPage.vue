@@ -1,9 +1,14 @@
 <template>
-  <div>チャットルームです</div>
+  <div class="container">
+    <NavbarPage />
+  </div>
 </template>
 
 <script>
+import NavbarPage from '../components/NavbarPage'
+
 export default {
+  components: { NavbarPage },
 }
 </script>
 
